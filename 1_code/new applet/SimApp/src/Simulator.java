@@ -1,5 +1,5 @@
 
-
+//Yang J. Ren
 import java.io.*;
 import java.awt.*;
 import java.util.*;
@@ -24,6 +24,7 @@ import org.jfree.data.xy.DefaultXYDataset;
 
 public class Simulator extends JApplet/* implements ActionListener*/{
 /**
+ * global buttons/labels
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
@@ -37,16 +38,22 @@ public class Simulator extends JApplet/* implements ActionListener*/{
     TextField populationT;
     private Double xLowerBound = null;
     private Double xUpperBound = null;
- 
+ /*
+  * sample data set to plot first
+  * */
     private double redSeries[][];// = new double[1000][1000];
  
     private JProgressBar pb = new JProgressBar();
+    
     public void init()  
     { 
     	setSize(830,768);
     	
  // Now we will use the FlowLayout 
          setLayout(new FlowLayout(FlowLayout.LEFT, 15, 15)); 
+         /*
+          * initialize the parts
+          * */
          demographics = new Label ("Demographics: ");;
          weather = new Label ("Weather: ");;
          population = new Label ("Population: ");
@@ -97,6 +104,9 @@ public class Simulator extends JApplet/* implements ActionListener*/{
  		// register this applet as a listener for the object
          /*add(nameField);*/
          
+         /*
+          * add to the applet screen
+          * */
          content.add(chartPanel);
          addNewLine();
          add(simulateButton);
