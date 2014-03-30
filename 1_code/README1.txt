@@ -32,3 +32,5 @@ upload_max_filesize=2M to 8M
 5.b.Build/add to path.
 6.Ctrl F11, run as java.
 7.Click Simulate to run simulation.
+
+The old applet is a modified version of the ski simulator made by group #10 of spring 2012. 
