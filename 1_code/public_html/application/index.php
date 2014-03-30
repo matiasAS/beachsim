@@ -1,0 +1,1 @@
+<?php exec(“java -jar simulation.jar”, $output); ?>

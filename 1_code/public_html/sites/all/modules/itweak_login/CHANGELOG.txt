@@ -1,0 +1,99 @@
+itweak_login 6.x-1.x-dev
+------------------------
+[#1690432] [#1796046] Fixed "can change own password" issues and functionality
+[NOISSUE] Coder review and some cleanup from D7
+[#1781888] Notice: Undefined variable: _SESSION in _itweak_login_custom_buttons()
+[NOISSUE] Added check_plain() and filter_xss_admin() where necessary
+
+
+itweak_login 6.x-1.15, 2012-05-02
+---------------------------------
+[#1438000] Removed warnings on some PHP installations
+[NOISSUE]  Included functionality of noreqnewpass module (no Request new password, change own password permission)
+[NOISSUE]  Added user login form examples on the settings page
+[NOISSUE]  Fixed recover password button weight
+[NOISSUE]  Refactored worker code into _itweak_login_login_form_alter()
+[#1376410] Allow custom login forms
+
+
+itweak_login 6.x-1.14, 2011-02-01
+---------------------------------
+[NOISSUE] Fixed skipped mods to user/register for multi-lingual sites
+[NOISSUE] Fixed skipped mods to user/register for non-clean URLs
+
+
+itweak_login 6.x-1.13, 2010-12-08
+---------------------------------
+[NOISSUE] by iva2k: Optimized performance around i18n_variables, also cleaned up some logic there
+[NOISSUE] by iva2k: i18n updated deserves a release. Performance improvement is noticeable!
+
+
+itweak_login 6.x-1.12, 2010-12-08
+---------------------------------
+[#992236] by iva2k: Login link regression bugfix
+
+
+itweak_login 6.x-1.11, 2010-11-30
+---------------------------------
+[#625162] by iva2k: Fixed form not submitting at /admin/user/user/create
+[#477742] by iva2k: Redone internationalization support to be installed from hook_init()
+[#928316] by iva2k: Fixed missing function _itweak_login_variables() in install
+[#791148] by johnbarclay: Ability to add text before username field in login page
+[#926598] by iva2k: Use theme_button function for register button
+[#866898] by iva2k: Option to use button instead of "request new password" link
+[NOISSUE] by iva2k: Reorder settings fields more logically
+[#799926] by iva2k: README updated
+[#926598] by iva2k: Use theme('button', ...) function for register button
+[#945190] by iva2k: Added setting for register URL
+[#983860] by iva2k: Redesigned Register/Recover buttons so they use standard HTML (no JS).
+
+
+itweak_login 6.x-1.10, 2009-08-06
+---------------------------------
+[NOISSUE] by iva2k: Fixed tabulation.
+[#540230] by brandon.dyck: Added renaming of User/Password labels.
+[NOISSUE] by iva2k: Disabled renaming of User/Password labels when LoginToboggan is overriding them.
+[NOISSUE] by iva2k: Added applicable tweaks from user_login_block to user_login page.
+[NOISSUE] by iva2k: Added applicable tweaks to tabs on user page.
+[NOISSUE] by iva2k: Regenerated .pot and .po files.
+
+itweak_login 6.x-1.9, 2009-07-29
+--------------------------------
+[NOISSUE] by iva2k: Bump the release to last -dev date. Just to annoy site admins with needless update;) -dev did not accumulate any real fixes, and queue is empty for quite a while.
+
+itweak_login 6.x-1.8, 2009-05-30
+--------------------------------
+[#477742] by iva2k: Added update_6001() so the Internationalization will register on update.
+
+itweak_login 6.x-1.7, 2009-05-30
+--------------------------------
+[#477742] by iva2k: Added internationalization support.
+
+itweak_login 6.x-1.6, 2009-05-29
+--------------------------------
+[#474158] by asak: Hebrew translation.
+[#474158] by iva2k: Updated Russian translation and .pot.
+
+itweak_login 6.x-1.5, 2009-05-28
+--------------------------------
+[NOISSUE] by iva2k: Translations cleanup.
+
+itweak_login 6.x-1.4, 2009-05-28
+--------------------------------
+[NOISSUE] by iva2k: Updated Russian translation.
+
+itweak_login 6.x-1.3, 2009-05-28
+--------------------------------
+[#474158] by iva2k: Added translations .pot & Russian translation.
+
+itweak_login 6.x-1.2, 2009-05-28
+--------------------------------
+[#475148] by iva2k: Fixed user/register to be passed through check_url(url(...)).
+
+itweak_login 6.x-1.1, 2009-05-26
+--------------------------------
+[NOISSUE] Config location fixed.
+
+itweak_login 6.x-1.0, 2009-05-26
+--------------------------------
+Initial commit, First Release.
