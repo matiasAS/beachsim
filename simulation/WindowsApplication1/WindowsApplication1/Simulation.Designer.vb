@@ -38,11 +38,21 @@ Partial Class Simulation
         Me.Button1 = New System.Windows.Forms.Button()
         Me.zipTxt = New System.Windows.Forms.MaskedTextBox()
         Me.popTxt = New System.Windows.Forms.MaskedTextBox()
-        Me.weatherTxt = New System.Windows.Forms.MaskedTextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.advoptLbl = New System.Windows.Forms.LinkLabel()
+        Me.DemographicsBox = New System.Windows.Forms.GroupBox()
+        Me.genderBox = New System.Windows.Forms.GroupBox()
+        Me.maleTbar = New System.Windows.Forms.TrackBar()
+        Me.femaleTbar = New System.Windows.Forms.TrackBar()
+        Me.maleLbl = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        Me.DemographicsBox.SuspendLayout()
+        Me.genderBox.SuspendLayout()
+        CType(Me.maleTbar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.femaleTbar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'locationLbl
@@ -101,9 +111,9 @@ Partial Class Simulation
         Me.populationLbl.AutoSize = True
         Me.populationLbl.Location = New System.Drawing.Point(11, 61)
         Me.populationLbl.Name = "populationLbl"
-        Me.populationLbl.Size = New System.Drawing.Size(57, 13)
+        Me.populationLbl.Size = New System.Drawing.Size(131, 13)
         Me.populationLbl.TabIndex = 4
-        Me.populationLbl.Text = "Population"
+        Me.populationLbl.Text = "Population (In Thousands)"
         '
         'weatherRdbtn
         '
@@ -164,6 +174,7 @@ Partial Class Simulation
         'zipTxt
         '
         Me.zipTxt.Location = New System.Drawing.Point(34, 38)
+        Me.zipTxt.Mask = "00000-9999"
         Me.zipTxt.Name = "zipTxt"
         Me.zipTxt.Size = New System.Drawing.Size(100, 20)
         Me.zipTxt.TabIndex = 14
@@ -171,24 +182,19 @@ Partial Class Simulation
         'popTxt
         '
         Me.popTxt.Location = New System.Drawing.Point(34, 97)
+        Me.popTxt.Mask = "00000"
         Me.popTxt.Name = "popTxt"
         Me.popTxt.Size = New System.Drawing.Size(100, 20)
         Me.popTxt.TabIndex = 15
-        '
-        'weatherTxt
-        '
-        Me.weatherTxt.Location = New System.Drawing.Point(34, 156)
-        Me.weatherTxt.Name = "weatherTxt"
-        Me.weatherTxt.Size = New System.Drawing.Size(100, 20)
-        Me.weatherTxt.TabIndex = 16
+        Me.popTxt.ValidatingType = GetType(Integer)
         '
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.CheckedListBox1)
         Me.Panel1.Controls.Add(Me.mypopRdbtn)
         Me.Panel1.Controls.Add(Me.mylocationRdbtn)
         Me.Panel1.Controls.Add(Me.locationLbl)
-        Me.Panel1.Controls.Add(Me.weatherTxt)
         Me.Panel1.Controls.Add(Me.textRdbtn)
         Me.Panel1.Controls.Add(Me.popTxt)
         Me.Panel1.Controls.Add(Me.populationLbl)
@@ -202,21 +208,86 @@ Partial Class Simulation
         Me.Panel1.Size = New System.Drawing.Size(179, 184)
         Me.Panel1.TabIndex = 17
         '
+        'advoptLbl
+        '
+        Me.advoptLbl.AutoSize = True
+        Me.advoptLbl.Location = New System.Drawing.Point(24, 335)
+        Me.advoptLbl.Name = "advoptLbl"
+        Me.advoptLbl.Size = New System.Drawing.Size(95, 13)
+        Me.advoptLbl.TabIndex = 19
+        Me.advoptLbl.TabStop = True
+        Me.advoptLbl.Text = "Advanced Options"
+        '
+        'DemographicsBox
+        '
+        Me.DemographicsBox.Controls.Add(Me.genderBox)
+        Me.DemographicsBox.Location = New System.Drawing.Point(12, 383)
+        Me.DemographicsBox.Name = "DemographicsBox"
+        Me.DemographicsBox.Size = New System.Drawing.Size(263, 261)
+        Me.DemographicsBox.TabIndex = 20
+        Me.DemographicsBox.TabStop = False
+        Me.DemographicsBox.Text = "Demographics"
+        '
+        'genderBox
+        '
+        Me.genderBox.Controls.Add(Me.Label1)
+        Me.genderBox.Controls.Add(Me.maleLbl)
+        Me.genderBox.Controls.Add(Me.femaleTbar)
+        Me.genderBox.Controls.Add(Me.maleTbar)
+        Me.genderBox.Location = New System.Drawing.Point(6, 32)
+        Me.genderBox.Name = "genderBox"
+        Me.genderBox.Size = New System.Drawing.Size(251, 110)
+        Me.genderBox.TabIndex = 0
+        Me.genderBox.TabStop = False
+        Me.genderBox.Text = "Gender"
+        '
+        'maleTbar
+        '
+        Me.maleTbar.Location = New System.Drawing.Point(61, 19)
+        Me.maleTbar.Name = "maleTbar"
+        Me.maleTbar.Size = New System.Drawing.Size(184, 45)
+        Me.maleTbar.TabIndex = 0
+        '
+        'femaleTbar
+        '
+        Me.femaleTbar.Location = New System.Drawing.Point(61, 65)
+        Me.femaleTbar.Name = "femaleTbar"
+        Me.femaleTbar.Size = New System.Drawing.Size(184, 45)
+        Me.femaleTbar.TabIndex = 1
+        '
+        'maleLbl
+        '
+        Me.maleLbl.AutoSize = True
+        Me.maleLbl.Location = New System.Drawing.Point(15, 29)
+        Me.maleLbl.Name = "maleLbl"
+        Me.maleLbl.Size = New System.Drawing.Size(33, 13)
+        Me.maleLbl.TabIndex = 2
+        Me.maleLbl.Text = "Male:"
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(24, 436)
+        Me.Label1.Location = New System.Drawing.Point(16, 65)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(39, 13)
-        Me.Label1.TabIndex = 18
+        Me.Label1.TabIndex = 3
         Me.Label1.Text = "Label1"
+        '
+        'CheckedListBox1
+        '
+        Me.CheckedListBox1.FormattingEnabled = True
+        Me.CheckedListBox1.Location = New System.Drawing.Point(34, 159)
+        Me.CheckedListBox1.Name = "CheckedListBox1"
+        Me.CheckedListBox1.Size = New System.Drawing.Size(120, 94)
+        Me.CheckedListBox1.TabIndex = 16
         '
         'Simulation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(558, 606)
-        Me.Controls.Add(Me.Label1)
+        Me.ClientSize = New System.Drawing.Size(558, 684)
+        Me.Controls.Add(Me.DemographicsBox)
+        Me.Controls.Add(Me.advoptLbl)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Chart1)
@@ -225,6 +296,11 @@ Partial Class Simulation
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.DemographicsBox.ResumeLayout(False)
+        Me.genderBox.ResumeLayout(False)
+        Me.genderBox.PerformLayout()
+        CType(Me.maleTbar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.femaleTbar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -242,8 +318,14 @@ Partial Class Simulation
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents zipTxt As System.Windows.Forms.MaskedTextBox
     Friend WithEvents popTxt As System.Windows.Forms.MaskedTextBox
-    Friend WithEvents weatherTxt As System.Windows.Forms.MaskedTextBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents advoptLbl As System.Windows.Forms.LinkLabel
+    Friend WithEvents DemographicsBox As System.Windows.Forms.GroupBox
+    Friend WithEvents genderBox As System.Windows.Forms.GroupBox
+    Friend WithEvents maleTbar As System.Windows.Forms.TrackBar
+    Friend WithEvents femaleTbar As System.Windows.Forms.TrackBar
+    Friend WithEvents maleLbl As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents CheckedListBox1 As System.Windows.Forms.CheckedListBox
 
 End Class

@@ -55,7 +55,7 @@ Public Class Simulation
         Chart1.Visible = True
     End Sub
 
-    Private Sub MaskedTextBox3_MaskInputRejected(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MaskInputRejectedEventArgs) Handles weatherTxt.MaskInputRejected
+    Private Sub MaskedTextBox3_MaskInputRejected(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MaskInputRejectedEventArgs)
 
     End Sub
 
@@ -68,6 +68,14 @@ Public Class Simulation
     End Sub
 
     Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    Private Sub genderBox_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles genderBox.Enter
+
+    End Sub
+
+    Private Sub TrackBar2_Scroll(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles femaleTbar.Scroll
 
     End Sub
 End Class
