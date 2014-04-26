@@ -4,7 +4,7 @@
 Public Class Simulation
 
     Private Sub Simulation_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
+        Me.Size = New Size(560, 400)
     End Sub
 
     Private Sub Label1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles locationLbl.Click
@@ -23,7 +23,7 @@ Public Class Simulation
 
     End Sub
 
-    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles weatherTxt.TextChanged
+    Private Sub TextBox1_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
     End Sub
 
@@ -53,5 +53,21 @@ Public Class Simulation
         s.Points.AddXY("1992", 17)
         Chart1.Series.Add(s)
         Chart1.Visible = True
+    End Sub
+
+    Private Sub MaskedTextBox3_MaskInputRejected(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MaskInputRejectedEventArgs) Handles weatherTxt.MaskInputRejected
+
+    End Sub
+
+    Private Sub MaskedTextBox2_MaskInputRejected(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MaskInputRejectedEventArgs) Handles popTxt.MaskInputRejected
+
+    End Sub
+
+    Private Sub zipTxt_MaskInputRejected(ByVal sender As System.Object, ByVal e As System.Windows.Forms.MaskInputRejectedEventArgs) Handles zipTxt.MaskInputRejected
+
+    End Sub
+
+    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class
