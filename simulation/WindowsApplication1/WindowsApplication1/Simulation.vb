@@ -5,6 +5,8 @@ Public Class Simulation
 
     Private Sub Simulation_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.Size = New Size(560, 400)
+        Me.MaximumSize = New Size(560, 400)
+        Me.MinimumSize = New Size(560, 400)
     End Sub
 
     Private Sub Label1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles locationLbl.Click
@@ -169,5 +171,11 @@ Public Class Simulation
 
     Private Sub Label7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label7.Click
 
+    End Sub
+
+    Private Sub advoptLbl_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles advoptLbl.LinkClicked
+        Me.MaximumSize = New Size(560, 750)
+        Me.Size = New Size(560, 750)
+        Me.AutoScroll = True
     End Sub
 End Class
