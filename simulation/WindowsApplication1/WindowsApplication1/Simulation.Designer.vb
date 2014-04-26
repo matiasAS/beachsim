@@ -22,6 +22,9 @@ Partial Class Simulation
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.locationLbl = New System.Windows.Forms.Label()
         Me.mylocationRdbtn = New System.Windows.Forms.RadioButton()
         Me.textRdbtn = New System.Windows.Forms.RadioButton()
@@ -34,6 +37,9 @@ Partial Class Simulation
         Me.weatherRdbtn = New System.Windows.Forms.RadioButton()
         Me.myweatherRdbtn = New System.Windows.Forms.RadioButton()
         Me.weatherLbl = New System.Windows.Forms.Label()
+        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.Button1 = New System.Windows.Forms.Button()
+        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'locationLbl
@@ -147,11 +153,39 @@ Partial Class Simulation
         Me.weatherLbl.TabIndex = 8
         Me.weatherLbl.Text = "Weather"
         '
+        'Chart1
+        '
+        ChartArea3.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea3)
+        Legend3.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend3)
+        Me.Chart1.Location = New System.Drawing.Point(319, 12)
+        Me.Chart1.Name = "Chart1"
+        Series3.ChartArea = "ChartArea1"
+        Series3.Legend = "Legend1"
+        Series3.Name = "Series1"
+        Me.Chart1.Series.Add(Series3)
+        Me.Chart1.Size = New System.Drawing.Size(300, 300)
+        Me.Chart1.TabIndex = 12
+        Me.Chart1.Text = "Chart1"
+        Me.Chart1.Visible = False
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(449, 340)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 13
+        Me.Button1.Text = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Simulation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(732, 492)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Chart1)
         Me.Controls.Add(Me.weatherTxt)
         Me.Controls.Add(Me.weatherRdbtn)
         Me.Controls.Add(Me.myweatherRdbtn)
@@ -166,6 +200,7 @@ Partial Class Simulation
         Me.Controls.Add(Me.locationLbl)
         Me.Name = "Simulation"
         Me.Text = "Simulation"
+        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -182,5 +217,7 @@ Partial Class Simulation
     Friend WithEvents weatherRdbtn As System.Windows.Forms.RadioButton
     Friend WithEvents myweatherRdbtn As System.Windows.Forms.RadioButton
     Friend WithEvents weatherLbl As System.Windows.Forms.Label
+    Friend WithEvents Chart1 As System.Windows.Forms.DataVisualization.Charting.Chart
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 
 End Class
