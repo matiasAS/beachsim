@@ -34,7 +34,6 @@ Partial Class Simulation
         Me.Button1 = New System.Windows.Forms.Button()
         Me.zipTxt = New System.Windows.Forms.MaskedTextBox()
         Me.popTxt = New System.Windows.Forms.MaskedTextBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -66,7 +65,6 @@ Partial Class Simulation
         Me.maleTbar = New System.Windows.Forms.TrackBar()
         Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.DemographicsBox.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -83,7 +81,7 @@ Partial Class Simulation
         'locationLbl
         '
         Me.locationLbl.AutoSize = True
-        Me.locationLbl.Location = New System.Drawing.Point(11, 2)
+        Me.locationLbl.Location = New System.Drawing.Point(9, 9)
         Me.locationLbl.Name = "locationLbl"
         Me.locationLbl.Size = New System.Drawing.Size(48, 13)
         Me.locationLbl.TabIndex = 0
@@ -92,7 +90,7 @@ Partial Class Simulation
         'mylocationRdbtn
         '
         Me.mylocationRdbtn.AutoSize = True
-        Me.mylocationRdbtn.Location = New System.Drawing.Point(14, 18)
+        Me.mylocationRdbtn.Location = New System.Drawing.Point(12, 25)
         Me.mylocationRdbtn.Name = "mylocationRdbtn"
         Me.mylocationRdbtn.Size = New System.Drawing.Size(83, 17)
         Me.mylocationRdbtn.TabIndex = 1
@@ -103,7 +101,7 @@ Partial Class Simulation
         'textRdbtn
         '
         Me.textRdbtn.AutoSize = True
-        Me.textRdbtn.Location = New System.Drawing.Point(14, 41)
+        Me.textRdbtn.Location = New System.Drawing.Point(12, 48)
         Me.textRdbtn.Name = "textRdbtn"
         Me.textRdbtn.Size = New System.Drawing.Size(14, 13)
         Me.textRdbtn.TabIndex = 2
@@ -113,7 +111,7 @@ Partial Class Simulation
         'popRdbtn
         '
         Me.popRdbtn.AutoSize = True
-        Me.popRdbtn.Location = New System.Drawing.Point(14, 112)
+        Me.popRdbtn.Location = New System.Drawing.Point(12, 119)
         Me.popRdbtn.Name = "popRdbtn"
         Me.popRdbtn.Size = New System.Drawing.Size(14, 13)
         Me.popRdbtn.TabIndex = 6
@@ -123,7 +121,7 @@ Partial Class Simulation
         'mypopRdbtn
         '
         Me.mypopRdbtn.AutoSize = True
-        Me.mypopRdbtn.Location = New System.Drawing.Point(14, 86)
+        Me.mypopRdbtn.Location = New System.Drawing.Point(12, 93)
         Me.mypopRdbtn.Name = "mypopRdbtn"
         Me.mypopRdbtn.Size = New System.Drawing.Size(112, 17)
         Me.mypopRdbtn.TabIndex = 5
@@ -134,7 +132,7 @@ Partial Class Simulation
         'populationLbl
         '
         Me.populationLbl.AutoSize = True
-        Me.populationLbl.Location = New System.Drawing.Point(11, 70)
+        Me.populationLbl.Location = New System.Drawing.Point(9, 77)
         Me.populationLbl.Name = "populationLbl"
         Me.populationLbl.Size = New System.Drawing.Size(131, 13)
         Me.populationLbl.TabIndex = 4
@@ -144,12 +142,12 @@ Partial Class Simulation
         '
         ChartArea1.Name = "ChartArea1"
         Me.Chart1.ChartAreas.Add(ChartArea1)
-        Me.Chart1.Location = New System.Drawing.Point(197, 9)
+        Me.Chart1.Location = New System.Drawing.Point(171, 9)
         Me.Chart1.Name = "Chart1"
         Series1.ChartArea = "ChartArea1"
         Series1.Name = "Series1"
         Me.Chart1.Series.Add(Series1)
-        Me.Chart1.Size = New System.Drawing.Size(433, 315)
+        Me.Chart1.Size = New System.Drawing.Size(459, 315)
         Me.Chart1.TabIndex = 12
         Me.Chart1.Text = "Chart1"
         Me.Chart1.Visible = False
@@ -166,7 +164,7 @@ Partial Class Simulation
         '
         'zipTxt
         '
-        Me.zipTxt.Location = New System.Drawing.Point(34, 38)
+        Me.zipTxt.Location = New System.Drawing.Point(32, 45)
         Me.zipTxt.Mask = "00000-9999"
         Me.zipTxt.Name = "zipTxt"
         Me.zipTxt.Size = New System.Drawing.Size(100, 20)
@@ -174,36 +172,19 @@ Partial Class Simulation
         '
         'popTxt
         '
-        Me.popTxt.Location = New System.Drawing.Point(34, 109)
+        Me.popTxt.Location = New System.Drawing.Point(32, 116)
         Me.popTxt.Mask = "00000"
         Me.popTxt.Name = "popTxt"
         Me.popTxt.Size = New System.Drawing.Size(100, 20)
         Me.popTxt.TabIndex = 15
         Me.popTxt.ValidatingType = GetType(Integer)
         '
-        'Panel1
-        '
-        Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.GroupBox1)
-        Me.Panel1.Controls.Add(Me.mypopRdbtn)
-        Me.Panel1.Controls.Add(Me.mylocationRdbtn)
-        Me.Panel1.Controls.Add(Me.locationLbl)
-        Me.Panel1.Controls.Add(Me.textRdbtn)
-        Me.Panel1.Controls.Add(Me.popTxt)
-        Me.Panel1.Controls.Add(Me.populationLbl)
-        Me.Panel1.Controls.Add(Me.zipTxt)
-        Me.Panel1.Controls.Add(Me.popRdbtn)
-        Me.Panel1.Location = New System.Drawing.Point(12, 9)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(179, 263)
-        Me.Panel1.TabIndex = 17
-        '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.ComboBox1)
         Me.GroupBox1.Controls.Add(Me.TextBox2)
         Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Location = New System.Drawing.Point(8, 139)
+        Me.GroupBox1.Location = New System.Drawing.Point(6, 146)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(159, 113)
         Me.GroupBox1.TabIndex = 16
@@ -213,14 +194,14 @@ Partial Class Simulation
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(13, 68)
+        Me.ComboBox1.Location = New System.Drawing.Point(11, 68)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox1.TabIndex = 5
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(16, 42)
+        Me.TextBox2.Location = New System.Drawing.Point(11, 42)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(118, 20)
         Me.TextBox2.TabIndex = 4
@@ -228,7 +209,7 @@ Partial Class Simulation
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(15, 16)
+        Me.TextBox1.Location = New System.Drawing.Point(11, 16)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(119, 20)
         Me.TextBox1.TabIndex = 3
@@ -480,17 +461,23 @@ Partial Class Simulation
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(632, 697)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.mypopRdbtn)
         Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.mylocationRdbtn)
         Me.Controls.Add(Me.DemographicsBox)
+        Me.Controls.Add(Me.locationLbl)
         Me.Controls.Add(Me.advoptLbl)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.textRdbtn)
+        Me.Controls.Add(Me.popTxt)
         Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.populationLbl)
         Me.Controls.Add(Me.Chart1)
+        Me.Controls.Add(Me.zipTxt)
+        Me.Controls.Add(Me.popRdbtn)
         Me.Name = "Simulation"
         Me.Text = "Simulation"
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.DemographicsBox.ResumeLayout(False)
@@ -519,7 +506,6 @@ Partial Class Simulation
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents zipTxt As System.Windows.Forms.MaskedTextBox
     Friend WithEvents popTxt As System.Windows.Forms.MaskedTextBox
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents advoptLbl As System.Windows.Forms.LinkLabel
     Friend WithEvents DemographicsBox As System.Windows.Forms.GroupBox
     Friend WithEvents genderBox As System.Windows.Forms.GroupBox
