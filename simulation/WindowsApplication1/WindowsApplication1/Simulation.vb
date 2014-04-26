@@ -17,10 +17,12 @@ Public Class Simulation
             .AxisY.Minimum = 0
             .AxisY.Maximum = 100
             .AxisY.Interval = 10
+            .AxisX.Interval = 10
             .AxisX.Title = "Simulation #"
             .AxisY.Title = "Expected Visitors"
         End With
-        s.Points.AddXY("0", 0)
+        s.Points.AddXY(0, 0)
+        s.Points.AddXY(1, 0)
         Chart1.Series.Add(s)
         Chart1.Visible = True
     End Sub
@@ -65,9 +67,9 @@ Public Class Simulation
         Chart1.Series.Clear()
         Dim s As New Series
         s.chartType = SeriesChartType.Line
-        s.Points.AddXY("1", 27)
-        s.Points.AddXY("2", 15)
-        s.Points.AddXY("3", 17)
+        s.Points.AddXY(10, 27)
+        s.Points.AddXY(20, 15)
+        s.Points.AddXY(30, 17)
         Chart1.Series.Add(s)
         Chart1.Visible = True
     End Sub
