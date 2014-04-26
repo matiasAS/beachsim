@@ -4,9 +4,33 @@
 Public Class Simulation
 
     Private Sub Simulation_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Me.Size = New Size(560, 400)
-        Me.MaximumSize = New Size(560, 400)
-        Me.MinimumSize = New Size(560, 400)
+        Me.Size = New Size(640, 400)
+        Me.MaximumSize = New Size(640, 400)
+        Me.MinimumSize = New Size(640, 400)
+        Chart1.Series.Clear()
+        Chart1.Titles.Add("Simulation")
+        Dim s As New Series
+        s.ChartType = SeriesChartType.Line
+        With Chart1.ChartAreas(0)
+
+            .AxisX.Minimum = 0
+
+            .AxisX.Maximum = 100
+
+            .AxisY.Minimum = 0
+
+            .AxisY.Maximum = 100
+
+            .AxisY.Interval = 10
+
+            .AxisX.Title = "Simulation #"
+
+            .AxisY.Title = "Expected Visitors"
+
+        End With
+        s.Points.AddXY("0", 0)
+        Chart1.Series.Add(s)
+        Chart1.Visible = True
     End Sub
 
     Private Sub Label1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles locationLbl.Click
@@ -47,7 +71,6 @@ Public Class Simulation
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Chart1.Series.Clear()
-        Chart1.Titles.Add("demo")
         Dim s As New Series
         s.chartType = SeriesChartType.Line
         s.Points.AddXY("1990", 27)
@@ -174,8 +197,8 @@ Public Class Simulation
     End Sub
 
     Private Sub advoptLbl_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles advoptLbl.LinkClicked
-        Me.MaximumSize = New Size(560, 750)
-        Me.Size = New Size(560, 750)
+        Me.MaximumSize = New Size(640, 750)
+        Me.Size = New Size(640, 750)
         Me.AutoScroll = True
     End Sub
 End Class

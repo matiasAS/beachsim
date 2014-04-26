@@ -7,3 +7,12 @@ C:\Users\MarioGerardoJr\Documents\GitHub\beachsim\simulation\WindowsApplication1
 C:\Users\MarioGerardoJr\Documents\GitHub\beachsim\simulation\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.exe
 C:\Users\MarioGerardoJr\Documents\GitHub\beachsim\simulation\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.xml
 C:\Users\MarioGerardoJr\Documents\GitHub\beachsim\simulation\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.pdb
+C:\Users\Yang\Documents\GitHub\beachsim\simulation\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.exe
+C:\Users\Yang\Documents\GitHub\beachsim\simulation\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.xml
+C:\Users\Yang\Documents\GitHub\beachsim\simulation\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.pdb
+C:\Users\Yang\Documents\GitHub\beachsim\simulation\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.exe
+C:\Users\Yang\Documents\GitHub\beachsim\simulation\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.pdb
+C:\Users\Yang\Documents\GitHub\beachsim\simulation\WindowsApplication1\WindowsApplication1\bin\Debug\WindowsApplication1.xml
+C:\Users\Yang\Documents\GitHub\beachsim\simulation\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.Simulation.resources
+C:\Users\Yang\Documents\GitHub\beachsim\simulation\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.Resources.resources
+C:\Users\Yang\Documents\GitHub\beachsim\simulation\WindowsApplication1\WindowsApplication1\obj\x86\Debug\WindowsApplication1.vbproj.GenerateResource.Cache
