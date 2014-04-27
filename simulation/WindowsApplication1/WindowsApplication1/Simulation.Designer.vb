@@ -194,6 +194,7 @@ Partial Class Simulation
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Cloudy", "Mostly Cloudy", "Partly Cloudy", "Showers", "Sunny"})
         Me.ComboBox1.Location = New System.Drawing.Point(11, 68)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
@@ -313,7 +314,7 @@ Partial Class Simulation
         '
         Me.elderlyTbar.Location = New System.Drawing.Point(53, 130)
         Me.elderlyTbar.Name = "elderlyTbar"
-        Me.elderlyTbar.Size = New System.Drawing.Size(184, 42)
+        Me.elderlyTbar.Size = New System.Drawing.Size(184, 45)
         Me.elderlyTbar.TabIndex = 10
         '
         'Label6
@@ -329,7 +330,7 @@ Partial Class Simulation
         '
         Me.adultTbar.Location = New System.Drawing.Point(53, 102)
         Me.adultTbar.Name = "adultTbar"
-        Me.adultTbar.Size = New System.Drawing.Size(184, 42)
+        Me.adultTbar.Size = New System.Drawing.Size(184, 45)
         Me.adultTbar.TabIndex = 8
         '
         'Label5
@@ -345,7 +346,7 @@ Partial Class Simulation
         '
         Me.youngTbar.Location = New System.Drawing.Point(53, 75)
         Me.youngTbar.Name = "youngTbar"
-        Me.youngTbar.Size = New System.Drawing.Size(184, 42)
+        Me.youngTbar.Size = New System.Drawing.Size(184, 45)
         Me.youngTbar.TabIndex = 6
         '
         'Label3
@@ -370,7 +371,7 @@ Partial Class Simulation
         '
         Me.teensTbar.Location = New System.Drawing.Point(53, 47)
         Me.teensTbar.Name = "teensTbar"
-        Me.teensTbar.Size = New System.Drawing.Size(184, 42)
+        Me.teensTbar.Size = New System.Drawing.Size(184, 45)
         Me.teensTbar.TabIndex = 1
         '
         'childrenTbar
@@ -378,7 +379,7 @@ Partial Class Simulation
         Me.childrenTbar.BackColor = System.Drawing.SystemColors.Control
         Me.childrenTbar.Location = New System.Drawing.Point(54, 19)
         Me.childrenTbar.Name = "childrenTbar"
-        Me.childrenTbar.Size = New System.Drawing.Size(184, 42)
+        Me.childrenTbar.Size = New System.Drawing.Size(184, 45)
         Me.childrenTbar.TabIndex = 0
         '
         'genderBox
@@ -436,7 +437,7 @@ Partial Class Simulation
         '
         Me.femaleTbar.Location = New System.Drawing.Point(54, 65)
         Me.femaleTbar.Name = "femaleTbar"
-        Me.femaleTbar.Size = New System.Drawing.Size(184, 42)
+        Me.femaleTbar.Size = New System.Drawing.Size(184, 45)
         Me.femaleTbar.TabIndex = 1
         '
         'maleTbar
@@ -444,7 +445,7 @@ Partial Class Simulation
         Me.maleTbar.BackColor = System.Drawing.SystemColors.Control
         Me.maleTbar.Location = New System.Drawing.Point(54, 19)
         Me.maleTbar.Name = "maleTbar"
-        Me.maleTbar.Size = New System.Drawing.Size(184, 42)
+        Me.maleTbar.Size = New System.Drawing.Size(184, 45)
         Me.maleTbar.TabIndex = 0
         '
         'Button2
