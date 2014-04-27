@@ -25,6 +25,14 @@ Public Class Simulation
         s.Points.AddXY(1, 0)
         Chart1.Series.Add(s)
         Chart1.Visible = True
+        femaleTbar.Minimum = ("0")
+        femaleTbar.Maximum = ("100")
+        femaleTbar.TickFrequency = ("10")
+        maleTbar.Minimum = ("0")
+        maleTbar.Maximum = ("100")
+        maleTbar.TickFrequency = ("10")
+        maleTbar.Value = ("50")
+        femaleTbar.Value = ("50")
     End Sub
 
     Private Sub Label1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles locationLbl.Click
@@ -94,9 +102,7 @@ Public Class Simulation
 
     End Sub
 
-    Private Sub TrackBar2_Scroll(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles femaleTbar.Scroll
-
-    End Sub
+    
 
     Private Sub CheckedListBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
@@ -200,5 +206,25 @@ Public Class Simulation
             Me.Size = New Size(660, 400)
             Me.AutoScroll = False
         End If
+    End Sub
+
+    Private Sub maleTbar_Scroll(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles maleTbar.Scroll
+        
+    End Sub
+
+    Private Sub malePerLbl_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles malePerLbl.Click
+
+    End Sub
+    Private Sub TrackBar2_Scroll(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles femaleTbar.Scroll
+        
+    End Sub
+    Private Sub maleTbar_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles maleTbar.ValueChanged
+        malePerLbl.Text = maleTbar.Value
+        femaleTbar.Value = 100 - maleTbar.Value
+    End Sub
+    
+    Private Sub femaleTbar_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles femaleTbar.ValueChanged
+        femalePerLbl.Text = femaleTbar.Value
+        maleTbar.Value = 100 - femaleTbar.Value
     End Sub
 End Class
