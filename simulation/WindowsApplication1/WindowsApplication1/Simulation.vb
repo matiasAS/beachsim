@@ -4,9 +4,9 @@
 Public Class Simulation
 
     Private Sub Simulation_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Me.Size = New Size(640, 400)
-        Me.MaximumSize = New Size(640, 400)
-        Me.MinimumSize = New Size(640, 400)
+        Me.Size = New Size(660, 400)
+        Me.MaximumSize = New Size(660, 400)
+        Me.MinimumSize = New Size(660, 400)
         Chart1.Series.Clear()
         Chart1.Titles.Add("Simulation")
         Dim s As New Series
@@ -192,12 +192,12 @@ Public Class Simulation
 
     Private Sub advoptLbl_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles advoptLbl.LinkClicked
         If Me.MaximumSize.Height = 400 Then
-            Me.MaximumSize = New Size(640, 750)
-            Me.Size = New Size(640, 750)
+            Me.MaximumSize = New Size(660, 750)
+            Me.Size = New Size(660, 750)
             Me.AutoScroll = True
         Else
-            Me.MaximumSize = New Size(640, 400)
-            Me.Size = New Size(640, 400)
+            Me.MaximumSize = New Size(660, 400)
+            Me.Size = New Size(660, 400)
             Me.AutoScroll = False
         End If
     End Sub
