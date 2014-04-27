@@ -22,8 +22,8 @@ Partial Class Simulation
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.locationLbl = New System.Windows.Forms.Label()
         Me.mylocationRdbtn = New System.Windows.Forms.RadioButton()
         Me.textRdbtn = New System.Windows.Forms.RadioButton()
@@ -140,13 +140,13 @@ Partial Class Simulation
         '
         'Chart1
         '
-        ChartArea1.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea1)
+        ChartArea2.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea2)
         Me.Chart1.Location = New System.Drawing.Point(171, 9)
         Me.Chart1.Name = "Chart1"
-        Series1.ChartArea = "ChartArea1"
-        Series1.Name = "Series1"
-        Me.Chart1.Series.Add(Series1)
+        Series2.ChartArea = "ChartArea1"
+        Series2.Name = "Series1"
+        Me.Chart1.Series.Add(Series2)
         Me.Chart1.Size = New System.Drawing.Size(459, 315)
         Me.Chart1.TabIndex = 12
         Me.Chart1.Text = "Chart1"
@@ -197,14 +197,14 @@ Partial Class Simulation
         Me.ComboBox1.Items.AddRange(New Object() {"Cloudy", "Mostly Cloudy", "Partly Cloudy", "Showers", "Sunny"})
         Me.ComboBox1.Location = New System.Drawing.Point(11, 68)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox1.Size = New System.Drawing.Size(119, 21)
         Me.ComboBox1.TabIndex = 5
         '
         'TextBox2
         '
         Me.TextBox2.Location = New System.Drawing.Point(11, 42)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(118, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(119, 20)
         Me.TextBox2.TabIndex = 4
         Me.TextBox2.Text = "Water Temperature"
         '
