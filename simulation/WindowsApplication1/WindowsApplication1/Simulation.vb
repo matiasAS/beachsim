@@ -191,8 +191,14 @@ Public Class Simulation
     End Sub
 
     Private Sub advoptLbl_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles advoptLbl.LinkClicked
-        Me.MaximumSize = New Size(640, 750)
-        Me.Size = New Size(640, 750)
-        Me.AutoScroll = True
+        If Me.MaximumSize.Height = 400 Then
+            Me.MaximumSize = New Size(640, 750)
+            Me.Size = New Size(640, 750)
+            Me.AutoScroll = True
+        Else
+            Me.MaximumSize = New Size(640, 400)
+            Me.Size = New Size(640, 400)
+            Me.AutoScroll = False
+        End If
     End Sub
 End Class
