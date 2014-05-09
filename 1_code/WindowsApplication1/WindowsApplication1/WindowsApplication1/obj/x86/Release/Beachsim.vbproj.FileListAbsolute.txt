@@ -1,0 +1,17 @@
+C:\Users\Gegi\Documents\GitHub\beachsim\simulation\WindowsApplication1\WindowsApplication1\bin\Release\Beachsim.exe.config
+C:\Users\Gegi\Documents\GitHub\beachsim\simulation\WindowsApplication1\WindowsApplication1\bin\Release\Beachsim.exe.manifest
+C:\Users\Gegi\Documents\GitHub\beachsim\simulation\WindowsApplication1\WindowsApplication1\bin\Release\Beachsim.application
+C:\Users\Gegi\Documents\GitHub\beachsim\simulation\WindowsApplication1\WindowsApplication1\bin\Release\Beachsim.exe
+C:\Users\Gegi\Documents\GitHub\beachsim\simulation\WindowsApplication1\WindowsApplication1\bin\Release\Beachsim.pdb
+C:\Users\Gegi\Documents\GitHub\beachsim\simulation\WindowsApplication1\WindowsApplication1\bin\Release\Beachsim.xml
+C:\Users\Gegi\Documents\GitHub\beachsim\simulation\WindowsApplication1\WindowsApplication1\obj\x86\Release\Beachsim.Registration.resources
+C:\Users\Gegi\Documents\GitHub\beachsim\simulation\WindowsApplication1\WindowsApplication1\obj\x86\Release\Beachsim.Forgot_password.resources
+C:\Users\Gegi\Documents\GitHub\beachsim\simulation\WindowsApplication1\WindowsApplication1\obj\x86\Release\Beachsim.Simulation.resources
+C:\Users\Gegi\Documents\GitHub\beachsim\simulation\WindowsApplication1\WindowsApplication1\obj\x86\Release\Beachsim.Login.resources
+C:\Users\Gegi\Documents\GitHub\beachsim\simulation\WindowsApplication1\WindowsApplication1\obj\x86\Release\Beachsim.Resources.resources
+C:\Users\Gegi\Documents\GitHub\beachsim\simulation\WindowsApplication1\WindowsApplication1\obj\x86\Release\Beachsim.vbproj.GenerateResource.Cache
+C:\Users\Gegi\Documents\GitHub\beachsim\simulation\WindowsApplication1\WindowsApplication1\obj\x86\Release\Beachsim.exe.manifest
+C:\Users\Gegi\Documents\GitHub\beachsim\simulation\WindowsApplication1\WindowsApplication1\obj\x86\Release\Beachsim.application
+C:\Users\Gegi\Documents\GitHub\beachsim\simulation\WindowsApplication1\WindowsApplication1\obj\x86\Release\Beachsim.exe
+C:\Users\Gegi\Documents\GitHub\beachsim\simulation\WindowsApplication1\WindowsApplication1\obj\x86\Release\Beachsim.xml
+C:\Users\Gegi\Documents\GitHub\beachsim\simulation\WindowsApplication1\WindowsApplication1\obj\x86\Release\Beachsim.pdb

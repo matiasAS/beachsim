@@ -1,0 +1,159 @@
+ Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+        'Save Test
+        Dim Connection As MySqlConnection
+        Dim Result As MySqlDataReader
+        Dim resultpass As String
+        Connection = New MySqlConnection("Server=144.76.19.105;Database=beachsim;Uid=beachsim;pwd=bAtCFWe5KpZG")
+        Try
+            Connection.Open()
+        Catch ex As MySql.Data.MySqlClient.MySqlException
+            MsgBox("Can't connect to database. Your internet may be off")
+        End Try
+
+        Dim cmd As New MySqlCommand
+        With cmd
+            .Connection = Connection
+            .CommandText = "UPDATE `Accounts` SET `Population` = " & popTxt.Text & ", `Airtemp` = " & airTempBox.Value & ", `Watertemp` = " & waterTempBox.Value & ", `Weather` = '" & weatherTxt.Text & "', `Male` = " & maleTbar.Value & ", `Female` = " & femaleTbar.Value & ", `0-9` = " & childrenTxt.Value & ", `10-19` = " & teensTxt.Value & ", `20-39` = " & youngTxt.Value & ", `40-59` =" & adultTxt.Value & ", `60+` = " & elderlyTxt.Value & " WHERE `Email` = '" & Login.UsernameTxtBx.Text & "'"
+            cmd.ExecuteNonQuery()
+        End With
+        'Load Test within Save
+        Dim passfail As Integer
+        passfail = 0
+        Dim passfailLoad As Integer
+        passfailLoad = 0
+        With cmd
+            .Connection = Connection
+            .CommandText = "SELECT * FROM Accounts WHERE Email = '" & Login.UsernameTxtBx.Text & "'"
+            Result = cmd.ExecuteReader
+            If Result.Read Then
+                resultpass = Result.GetString(20)
+                If popTxt.Value <> resultpass Then
+                    passfail = 1
+                End If
+                popTxt.Value = resultpass
+                If popTxt.Value <> Result.GetString(20) Then
+                    passfailLoad = 1
+                End If
+
+                resultpass = Result.GetInt16(21)
+                If airTempBox.Value <> resultpass Then
+                    passfail = 1
+                End If
+                airTempBox.Value = resultpass
+                If airTempBox.Value <> Result.GetInt16(21) Then
+                    passfailLoad = 1
+                End If
+
+                resultpass = Result.GetInt16(22)
+                If waterTempBox.Value <> resultpass Then
+                    passfail = 1
+                End If
+                waterTempBox.Value = resultpass
+                If waterTempBox.Value <> Result.GetInt16(22) Then
+                    passfailLoad = 1
+                End If
+
+                resultpass = Result.GetString(23)
+                If weatherTxt.Text <> resultpass Then
+                    passfail = 1
+                End If
+                weatherTxt.Text = resultpass
+                If weatherTxt.Text <> Result.GetString(23) Then
+                    passfailLoad = 1
+                End If
+
+                resultpass = Result.GetInt16(24)
+                If maleTbar.Value <> resultpass Then
+                    passfail = 1
+                End If
+                maleTbar.Value = resultpass
+                If maleTbar.Value <> Result.GetInt16(24) Then
+                    passfailLoad = 1
+                End If
+
+                resultpass = Result.GetInt16(25)
+                If femaleTbar.Value <> resultpass Then
+                    passfail = 1
+                End If
+                femaleTbar.Value = resultpass
+                If femaleTbar.Value <> Result.GetInt16(25) Then
+                    passfailLoad = 1
+                End If
+
+                resultpass = Result.GetInt16(26)
+                If childrenTbar.Value <> resultpass Then
+                    passfail = 1
+                End If
+                childrenTbar.Value = resultpass
+                If childrenTbar.Value <> Result.GetInt16(26) Then
+                    passfailLoad = 1
+                End If
+
+                resultpass = Result.GetInt16(27)
+                If teensTxt.Value <> resultpass Then
+                    passfail = 1
+                End If
+                teensTxt.Value = resultpass
+                If teensTxt.Value <> Result.GetInt16(27) Then
+                    passfailLoad = 1
+                End If
+
+                resultpass = Result.GetInt16(28)
+                If youngTxt.Value <> resultpass Then
+                    passfail = 1
+                End If
+                youngTxt.Value = resultpass
+                If youngTxt.Value <> Result.GetInt16(28) Then
+                    passfailLoad = 1
+                End If
+
+                resultpass = Result.GetInt16(29)
+                If adultTxt.Value <> resultpass Then
+                    passfail = 1
+                End If
+                adultTxt.Value = resultpass
+                If adultTxt.Value <> Result.GetInt16(29) Then
+                    passfailLoad = 1
+                End If
+
+                resultpass = Result.GetInt16(30)
+                If elderlyTxt.Value <> resultpass Then
+                    passfail = 1
+                End If
+                elderlyTxt.Value = resultpass
+                If elderlyTxt.Value <> Result.GetInt16(30) Then
+                    passfailLoad = 1
+                End If
+
+                Result.Close()
+            End If
+
+
+
+        End With
+
+        Connection.Close()
+
+        If passfail <> 0 Then
+            Debug.Write("Save Failed" & vbCrLf)
+        Else
+            Debug.Write("Save Success" & vbCrLf)
+        End If
+
+        If passfailLoad <> 0 Then
+            Debug.Write("Load Failed" & vbCrLf)
+        Else
+            Debug.Write("Load Success" & vbCrLf)
+        End If
+
+
+        'Export Test
+        Dim path As String = Directory.GetCurrentDirectory()
+        Export(path & "/test.txt")
+        If My.Computer.FileSystem.FileExists(path & "/test.txt") Then
+            Debug.Write("Test Passed: Simulation was exported" & vbCrLf)
+        Else
+            Debug.Write("Test Failed: Simulation was not exported" & vbCrLf)
+        End If
+
+    End Sub
